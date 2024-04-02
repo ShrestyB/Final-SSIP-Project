@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Visualization</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+    background: hsla(37, 59%, 46%, 1);
+    background: linear-gradient(135deg, hsla(37, 59%, 46%, 1) 0%, hsla(38, 100%, 81%, 1) 100%);
+    background: -moz-linear-gradient(135deg, hsla(37, 59%, 46%, 1) 0%, hsla(38, 100%, 81%, 1) 100%);
+    background: -webkit-linear-gradient(135deg, hsla(37, 59%, 46%, 1) 0%, hsla(38, 100%, 81%, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#BB8630", endColorstr="#FFDB9E", GradientType=1);
+    }
+
+    
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: rgb(224, 222, 228)
+        }
+
+        li {
+            float: left;
+        }
+
+        li a {
+            display: block;
+            color: rgb(0, 0, 0);
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-family: 'Lexend', sans-serif;
+        }
+
+        li a:hover {
+            background-color: #111;
+        }
+
+        .content {
+            margin: 50px;
+        }
+
+        h1 {
+            font-family: 'Lexend', sans-serif;
+        }
+
+        .button-container {
+            margin-top: 20px;
+        }
+
+        .city-button {
+            background-color: #4CAF50;
+            /* Green */
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 8px;
+        }
+
+        #cityImage {
+            max-width: 100%;
+            height: auto;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <ul>
+            <li style="float:right;font-size: x-large"><a href="login.html">Login</a></li>
+            <li style="float:right;font-size: x-large"><a href="register.html">Register</a></li>
+            <li style="float:right;font-size: x-large"><a href="ssip.html">Home</a></li>
+            <li style="float:left;margin-top: 5px;margin-left: 10px;"><img src="QR CODE FEEDBACK.png" width="50px"></li>
+        </ul>
+    </div>
+    <div class="content">
+        <h1>Data Visualization Results</h1>
+        <div class="button-container">
+            <button class="city-button" onclick="displayFeedback('Ahmedabad')">Ahmedabad</button>
+            <button class="city-button" onclick="displayFeedback('Gandhinagar')">Gandhinagar</button>
+            <button class="city-button" onclick="displayFeedback('Rajkot')">Rajkot</button>
+            <button class="city-button" onclick="displayFeedback('Vadodara')">Vadodara</button>
+            <button class="city-button" onclick="displayFeedback('Surat')">Surat</button>
+            <button class="city-button" onclick="displayOverallFeedback('Visualize')">Overall Feedback</button>
+            <button class="city-button" onclick="displayOverallComment('Figure_1.png')">Comments</button>
+        </div>
+        <!-- Example: Bar chart using Chart.js -->
+        <canvas id="myChart" width="400" height="400" style="display: none;"></canvas>
+        <img id="cityImage">
+        <script>
+            function displayFeedback(city) {
+                // Hide the bar graph   
+                document.getElementById('myChart').style.display = 'none';
+
+                // Set the source of the image element based on the city
+                var imageName = city.toLowerCase() + '.png';
+                document.getElementById('cityImage').src = imageName;
+
+                // Show the image element
+                document.getElementById('cityImage').style.display = 'block';
+            }
+
+            function displayOverallFeedback() {
+                // Show the bar graph
+                document.getElementById('myChart').style.display = 'block';
+
+                // Hide the image element
+                document.getElementById('cityImage').style.display = 'none';
+            }
+
+            function displayOverallComment(){
+                document.getElementById('cityImage').src = 'Figure_1.png';
+                document.getElementById('cityImage').style.display = 'block';
+            }
+
+            // Example data (replace with your actual data)
+            var ctx = document.getElementById('myChart').getContext('2d');
+            var myChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['Good', 'Average', 'Bad'],
+                    datasets: [{
+                        label: 'Feedback Analysis',
+                        data: [50, 75, 90], // Replace with your analysis results
+                        backgroundColor: [
+                            'rgba(255, 99, 132, 0.2)',
+                            'rgba(54, 162, 235, 0.2)',
+                            'rgba(255, 206, 86, 0.2)'
+                        ],
+                        borderColor: [
+                            'rgba(255, 99, 132, 1)',
+                            'rgba(54, 162, 235, 1)',
+                            'rgba(255, 206, 86, 1)'
+                        ],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+        </script>
+    </div>
+</body>
+

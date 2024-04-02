@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SSIP</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend&display=swap" rel="stylesheet">
+    <style>
+        body {
+    background: hsla(37, 59%, 46%, 1);
+    background: linear-gradient(135deg, hsla(37, 59%, 46%, 1) 0%, hsla(38, 100%, 81%, 1) 100%);
+    background: -moz-linear-gradient(135deg, hsla(37, 59%, 46%, 1) 0%, hsla(38, 100%, 81%, 1) 100%);
+    background: -webkit-linear-gradient(135deg, hsla(37, 59%, 46%, 1) 0%, hsla(38, 100%, 81%, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#BB8630", endColorstr="#FFDB9E", GradientType=1);
+    }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        li {
+            float: left;
+        }
+
+        li a {
+            display: block;
+            color: rgb(0, 0, 0);
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-family: 'Lexend', sans-serif;
+        }
+
+        li a:hover {
+            /* background-color: #111; */
+            color: #50d1c0;
+            background: black;
+            box-shadow: 0 0 20px 0 rgba(0,0,0,0.3);
+            text-decoration: none;
+        }
+
+        .leftbox {
+            float: left;
+            width: 50%;
+            margin-top: 150px;
+        }
+
+        .rightbox {
+            float: left;
+            width: 50%;
+            margin-top: 150px;
+            
+        }
+
+        /* Apply the 'Lexend' font to the text */
+        p,
+        li {
+            font-family: 'Lexend', sans-serif;
+        }
+       
+    /* Background styling for the "Steps" section */
+    .steps-section {
+        background-color: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
+        margin: 20px;
+    }
+
+    /* Title for the "Steps" section */
+    .steps-title {
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    /* Styling for individual steps */
+    .step {
+        margin-top: 20px;
+        font-size: 18px;
+    }
+
+    /* Styling for step descriptions */
+    .step-description {
+        margin-left: 20px;
+    }
+</style>
+
+    </style>
+</head>
+
+<body style="background-color: rgb(188, 188, 188);">
+    <div>
+        <ul style="background-color: #ffffff;">
+            <li style="float:right;font-size: x-large"><a class="active" href="register.html">Register</a></li>
+            <li style="float:right;font-size: x-large"><a href="login.html">Login</a></li>
+            <li style="float:right;font-size: x-large"><a href="visualization.html">Data Visualization</a></li>
+            <li style="float:right;font-size: x-large"><a href="ssip.html">Home</a></li>
+            <li style="float:left;margin-top: 5px;margin-left: 10px;"><img src="Qr logo.png" width="50px"></li>
+        </ul>
+        
+        
+        <div class="leftbox">
+            <div class="steps-section">
+                <p class="steps-title">Steps</p>
+                <ul class="steps-list">
+                    <li class="step">
+                        <span class="step-title">1. QR Code Scan:</span><br>
+                        <span class="step-description">Users scan the QR code to access the feedback form.</span>
+                    </li>
+        
+                    <li class="step">
+                        <span class="step-title">2. Feedback Submission:</span><br>
+                        <span class="step-description">Fill out the feedback form with your responses.</span>
+                    </li>
+        
+                    <li class="step">
+                        <span class="step-title">3. Data Storage:</span><br>
+                        <span class="step-description">Your feedback is securely stored in the MongoDB Cloud.</span>
+                    </li>
+        
+                    <li class="step">
+                        <span class="step-title">4. Analysis & CSV:</span><br>
+                        <span class="step-description">Data is analyzed using Python, creating separate CSV files for each district.</span>
+                    </li>
+        
+                    <li class="step">
+                        <span class="step-title">5. Visualization:</span><br>
+                        <span class="step-description">Python generates visual representations of district-wise feedback.</span>
+                    </li>
+        
+                    <li class="step">
+                        <span class="step-title">6. Front-end Display:</span><br>
+                        <span class="step-description">Interactive front-end displays district data and pie charts.</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+    <div class="rightbox">
+        <p style="font-size:xxx-large;">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspQr Based Feedback&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</p>
+        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<img src="QR CODE FEEDBACK.png" width="160px" style="margin-left: 100px;">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+    </div>
+</body>
+
+</html>

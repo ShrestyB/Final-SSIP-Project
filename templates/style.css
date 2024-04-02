@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow&family=Lexend&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rowdies&display=swap');
+
+* {
+    box-sizing: border-box; 
+    margin: 0; 
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex; 
+    justify-content: flex-end;
+    align-items: center; 
+    padding: 15px 2%;
+    background-color: rgb(255, 255, 255);
+    margin: 7px;
+    border-radius: 5px;
+    font-family: 'Lexend', sans-serif;
+    font-size: large;
+    font-weight: bold;
+}
+
+.icon{
+    margin-right: auto;
+}
+
+.navbar{
+    list-style: none;
+    text-decoration: none;
+}
+
+.navbar li{
+    display: inline-block;
+    padding: 0px 20px;
+    text-decoration: none;
+}
+
+.navbar li a{
+    text-decoration: none;
+    color: #000000;
+    position: relative;
+    padding: 5px;
+    transition: color 0.3s;
+}
+
+/* Add this to your existing CSS code */
+
+.navbar li a:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #a71d04; /* Change the underline color */
+    transform-origin: bottom right;
+    transition: transform 0.3s ease;
+}
+
+.navbar li a:hover{
+    color: #a71d04;
+}
+
+.navbar li a:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+body {
+    background: hsla(37, 59%, 46%, 1);
+    background: linear-gradient(135deg, hsla(37, 59%, 46%, 1) 0%, hsla(38, 100%, 81%, 1) 100%);
+    background: -moz-linear-gradient(135deg, hsla(37, 59%, 46%, 1) 0%, hsla(38, 100%, 81%, 1) 100%);
+    background: -webkit-linear-gradient(135deg, hsla(37, 59%, 46%, 1) 0%, hsla(38, 100%, 81%, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#BB8630", endColorstr="#FFDB9E", GradientType=1);
+}
+
+.content-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr; /* Two columns, the first occupies 1 fraction, the second 2 fractions */
+    gap: 20px; /* Spacing between the grid items */
+    
+}
+
+.police {
+    grid-row: span 2; /* Span 2 rows */
+    margin: 120px 100px 10px 170px;
+}
+
+.quote, .intro {
+    text-align: left; /* Align the text left in the second column */
+    height: auto;
+    width: 80%;
+    color: #921803;
+}
+
+.quote{
+    font-family: 'Rowdies', sans-serif;
+    font-size: 40px;
+    margin: 120px 50px 0px;
+}
+
+.intro{
+    font-family: 'Lexend', sans-serif;
+    font-size: 18px;
+    margin: 0px 50px 10px;
+    color: #870303;
+}
+
+.centered-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto; /* Center vertically on the entire viewport height */
+    text-align: center; /* Center text horizontally */
+}
+
+.thank {
+    margin: 150px 0px 20px;
+    color: #921803;
+}
+
+.t1{
+    font-family: 'Rowdies', sans-serif;
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+
+.t2{
+    font-family: 'Lexend', sans-serif;
+    font-size: 18px;
+    margin-bottom: 40px;
+    color: #870303;
+    width: 500px;
+}
+
+.home {
+    text-decoration: none;
+    padding: 20px 80px;
+    border: 2px solid #870303;
+    color: white;
+    border-radius: 5px;
+    font-family: 'Lexend', sans-serif;
+    font-size: large;
+    color: #870303;
+    transition: color 0.3s;
+}
+
+.home:hover{
+    background-color: #870303;
+    color: #ffffff;
+    transition: background-color 0.3s;
+}
